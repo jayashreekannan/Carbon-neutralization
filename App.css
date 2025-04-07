@@ -1,0 +1,172 @@
+/* src/styles/App.css */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 20px; /* Added padding to body */
+  background-color: #e0ffe0; /* Light green background */
+  color: #333;
+  display: flex; /* Enable flexbox for the body */
+  flex-direction: column; /* Stack content vertically */
+  min-height: 100vh; /* Ensure body takes at least the full height of the viewport */
+}
+
+
+main {
+  flex-grow: 1; /* Allow main to take up remaining space */
+}
+/* General styling for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  color: #2e7d32; /* Darker green for headings */
+  margin-bottom: 10px;
+}
+
+/* General styling for paragraphs */
+p {
+  line-height: 1.6;
+}
+
+/* 3D Box */
+.box-3d {
+  background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+  perspective: 1000px; /* Define the perspective for 3D effect */
+  transform-style: preserve-3d; /* Enables 3D transformations */
+  transition: transform 0.5s ease; /* Smooth transition for hover effect */
+  transform: rotateY(15deg) translateZ(20px); /* Initial 3D position */
+  
+}
+
+/* Emoji section */
+.emoji-section {
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Basic layout */
+nav {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  min-height: 70px;
+  border-bottom: #77a213 3px solid;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav li {
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+nav li a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+header .highlight, header .current a {
+  color: #77a213;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #ccc;
+  font-weight: bold;
+}
+
+/* Forms */
+input[type='text'],
+input[type='email'],
+input[type='password']{
+  display: block;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #2e7d32;
+  margin-bottom: 10px;
+
+}
+
+button {
+  background: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2e7d32;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Utility classes (optional but recommended) */
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.py-1 { padding-top: 1rem; padding-bottom: 1rem; }
+.px-1 { padding-left: 1rem; padding-right: 1rem; }
+
+/* Responsive adjustments (basic example) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  header #branding,
+  header nav,
+  header nav li {
+    float: none;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+}
